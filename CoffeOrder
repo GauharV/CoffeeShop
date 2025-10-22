@@ -1,0 +1,35 @@
+public class CoffeeOrder {
+    String size;
+    String type;
+    private String orderID;
+    static int totalOrders;
+
+    // No-arg constructor
+    public CoffeeOrder() {
+        this.size = "medium";
+        this.type = "black";
+        totalOrders++;
+    }
+
+    // Constructor that takes size only
+    public CoffeeOrder(String size) {
+        this.size = size;
+        this.type = "black";
+        totalOrders++;
+    }
+
+    // Constructor that takes size and type
+    public CoffeeOrder(String size, String type) {
+        this.size = size;
+        this.type = type;
+        totalOrders++;
+    }
+
+    public String describeOrder() {
+        return "Order: " + size + " " + type;
+    }
+
+    public static int getTotalOrders() {
+        return totalOrders;
+    }
+}
